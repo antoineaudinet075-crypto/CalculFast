@@ -1,1 +1,230 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculateur de moyenne gratuit — CalcuFast</title><meta name="description" content="Entre plusieurs notes séparées par des espaces ou des virgules."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Calculateur de moyenne</div><div class="calculator-layout"><section class="panel"><h1>Calculateur de moyenne</h1><p class="lead">Entre plusieurs notes séparées par des espaces ou des virgules.</p><div data-calc="calcMoyenne"><div class="field"><label for="notes">Notes sur 20</label><input id="notes" type="text" value="12 15 14 16"></div><div class="result"><div class="result-label">Moyenne</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>Pour une moyenne avec coefficients, un outil dédié sera ajouté prochainement.</p><div class="formula">Moyenne = somme des notes ÷ nombre de notes</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calcul de moyenne de notes sur 20 sans coefficient | CalcuFast</title>
+  <meta name="description" content="Calculez gratuitement la moyenne simple de plusieurs notes sur 20. Saisissez vos notes séparées par des espaces ou des virgules.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/moyenne.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculateur de moyenne de notes — CalcuFast">
+  <meta property="og:description" content="Entrez plusieurs notes sur 20 et obtenez immédiatement leur moyenne simple.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/moyenne.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur de moyenne CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/moyenne.html",
+        "description": "Calculateur gratuit permettant d’obtenir la moyenne simple de plusieurs notes sur 20.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment calculer la moyenne de plusieurs notes ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Additionnez toutes les notes, puis divisez la somme obtenue par le nombre total de notes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le calculateur prend-il en compte les coefficients ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Cet outil calcule une moyenne simple : toutes les notes ont le même poids."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment séparer les notes ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vous pouvez séparer les notes par des espaces ou des virgules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les notes sont-elles enregistrées ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est réalisé directement dans le navigateur et les notes ne sont pas enregistrées par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Calculateur de moyenne
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculateur de moyenne sur 20</h1>
+
+          <p class="lead">
+            Saisissez plusieurs notes séparées par des espaces ou des virgules
+            pour obtenir immédiatement leur moyenne simple.
+          </p>
+
+          <div data-calc="calcMoyenne">
+            <div class="field">
+              <label for="notes">Notes sur 20, sans coefficients</label>
+              <input
+                id="notes"
+                type="text"
+                value="12 15 14 16"
+                placeholder="Exemple : 12 15 14 16"
+                autocomplete="off"
+              >
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Moyenne simple</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment calculer une moyenne ?</h2>
+
+          <p>
+            Pour calculer une moyenne simple, additionnez toutes les notes,
+            puis divisez cette somme par le nombre de notes.
+          </p>
+
+          <div class="formula">
+            Moyenne = somme des notes ÷ nombre de notes
+          </div>
+
+          <h2>Exemple de calcul</h2>
+
+          <p>
+            Pour les notes 12, 15, 14 et 16, la somme est égale à 57. Comme
+            il existe quatre notes, la moyenne est de 14,25 sur 20.
+          </p>
+
+          <div class="formula">
+            (12 + 15 + 14 + 16) ÷ 4 = 14,25
+          </div>
+
+          <h2>Comment saisir les notes ?</h2>
+
+          <p>
+            Entrez toutes les notes dans le même champ en les séparant par
+            des espaces ou des virgules. Par exemple :
+          </p>
+
+          <div class="formula">
+            12 15 14 16
+          </div>
+
+          <p>ou :</p>
+
+          <div class="formula">
+            12, 15, 14, 16
+          </div>
+
+          <h2>Moyenne simple ou moyenne avec coefficients ?</h2>
+
+          <p>
+            Ce calculateur effectue une moyenne simple : chaque note compte
+            autant que les autres. Il ne prend pas en compte les coefficients.
+          </p>
+
+          <p>
+            Pour une moyenne avec coefficients, il faut multiplier chaque note
+            par son coefficient, additionner les résultats, puis diviser par
+            la somme des coefficients.
+          </p>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment calculer la moyenne de plusieurs notes ?</summary>
+              <p>
+                Additionnez toutes les notes, puis divisez la somme par le
+                nombre total de notes.
+              </p>
+            </details>
+
+            <details>
+              <summary>Le calculateur prend-il en compte les coefficients ?</summary>
+              <p>
+                Non. Il calcule une moyenne simple dans laquelle toutes les
+                notes ont le même poids.
+              </p>
+            </details>
+
+            <details>
+              <summary>Comment séparer les notes ?</summary>
+              <p>
+                Vous pouvez les séparer par des espaces ou par des virgules.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les notes sont-elles enregistrées ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les notes ne sont pas enregistrées par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

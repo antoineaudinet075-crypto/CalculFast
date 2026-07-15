@@ -1,1 +1,272 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculateur d’intérêts composés gratuit — CalcuFast</title><meta name="description" content="Projette la valeur future d’un capital avec rendement et versements réguliers."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Calculateur d’intérêts composés</div><div class="calculator-layout"><section class="panel"><h1>Calculateur d’intérêts composés</h1><p class="lead">Projette la valeur future d’un capital avec rendement et versements réguliers.</p><div data-calc="calcInterets"><div class="field"><label for="capital">Capital initial (€)</label><input id="capital" type="number" value="1000" step="any"></div><div class="field"><label for="rendement">Rendement annuel (%)</label><input id="rendement" type="number" value="5" step="any"></div><div class="field"><label for="annees">Durée (années)</label><input id="annees" type="number" value="10" step="any"></div><div class="field"><label for="versement">Versement mensuel (€)</label><input id="versement" type="number" value="100" step="any"></div><div class="result"><div class="result-label">Capital estimé</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>Les rendements ne sont jamais garantis et ce calcul ignore les frais et la fiscalité.</p><div class="formula">Capital futur = capital et versements capitalisés chaque année</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calcul d’intérêts composés avec versements | CalcuFast</title>
+  <meta name="description" content="Estimez gratuitement la valeur future d’un capital avec un rendement annuel, une durée et des versements mensuels réguliers.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/interets-composes.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculateur d’intérêts composés — CalcuFast">
+  <meta property="og:description" content="Projetez un capital avec un rendement hypothétique et des versements mensuels.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/interets-composes.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur d’intérêts composés CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/interets-composes.html",
+        "description": "Simulateur gratuit de capital futur avec rendement annuel et versements mensuels.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Que sont les intérêts composés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les intérêts composés sont des intérêts qui s’ajoutent au capital et peuvent ensuite produire eux-mêmes de nouveaux intérêts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le rendement indiqué est-il garanti ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le rendement saisi est une hypothèse de simulation et ne constitue pas une promesse de performance future."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le calcul inclut-il les frais, les impôts et l’inflation ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. L’estimation ne tient pas compte des frais, de la fiscalité, des prélèvements sociaux ni de l’inflation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les montants saisis sont-ils enregistrés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est réalisé directement dans le navigateur et les montants ne sont pas enregistrés par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Intérêts composés
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculateur d’intérêts composés</h1>
+
+          <p class="lead">
+            Estimez la valeur future d’un capital en fonction d’un rendement
+            annuel hypothétique, d’une durée et de versements mensuels.
+          </p>
+
+          <div data-calc="calcInterets">
+            <div class="field">
+              <label for="capital">Capital initial (€)</label>
+              <input
+                id="capital"
+                type="number"
+                value="1000"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="rendement">Rendement annuel hypothétique (%)</label>
+              <input
+                id="rendement"
+                type="number"
+                value="5"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="annees">Durée (années)</label>
+              <input
+                id="annees"
+                type="number"
+                value="10"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="versement">Versement mensuel (€)</label>
+              <input
+                id="versement"
+                type="number"
+                value="100"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Capital futur estimé</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment fonctionnent les intérêts composés ?</h2>
+
+          <p>
+            Avec les intérêts composés, les gains obtenus s’ajoutent au capital.
+            Ils peuvent ensuite produire à leur tour de nouveaux intérêts.
+            Ce mécanisme se répète au fil du temps.
+          </p>
+
+          <div class="formula">
+            Capital futur sans versements = capital initial × (1 + taux)ᵈᵘʳᵉ́ᵉ
+          </div>
+
+          <h2>Pourquoi les versements réguliers comptent-ils ?</h2>
+
+          <p>
+            Des versements mensuels augmentent progressivement la somme placée.
+            Chaque versement dispose ensuite d’une durée différente pour
+            produire d’éventuels intérêts.
+          </p>
+
+          <h2>Les quatre éléments de la simulation</h2>
+
+          <ul>
+            <li><strong>Capital initial :</strong> somme disponible au début ;</li>
+            <li><strong>Rendement annuel :</strong> hypothèse moyenne utilisée pour la projection ;</li>
+            <li><strong>Durée :</strong> nombre d’années de la simulation ;</li>
+            <li><strong>Versement mensuel :</strong> somme ajoutée chaque mois.</li>
+          </ul>
+
+          <h2>Ce que le résultat ne prend pas en compte</h2>
+
+          <p>Cette estimation simplifiée ignore notamment :</p>
+
+          <ul>
+            <li>les frais de gestion, d’entrée ou de sortie ;</li>
+            <li>les impôts et les prélèvements sociaux ;</li>
+            <li>l’inflation et la perte de pouvoir d’achat ;</li>
+            <li>les variations réelles du rendement d’une année à l’autre ;</li>
+            <li>le risque de perte en capital.</li>
+          </ul>
+
+          <p>
+            Le taux saisi reste une hypothèse constante. Il ne constitue pas
+            une garantie ni un conseil en investissement. L’Autorité des
+            marchés financiers rappelle que rendement et risque sont liés et
+            qu’une performance future ne peut pas être connue avec certitude.
+          </p>
+
+          <p>
+            En savoir plus sur
+            <a href="https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/risques-et-rendements-des-placements"
+               target="_blank"
+               rel="noopener noreferrer">
+              les rendements et les risques selon l’AMF
+            </a>.
+          </p>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Que sont les intérêts composés ?</summary>
+              <p>
+                Ce sont des intérêts ajoutés au capital qui peuvent ensuite
+                produire eux-mêmes de nouveaux intérêts.
+              </p>
+            </details>
+
+            <details>
+              <summary>Le rendement indiqué est-il garanti ?</summary>
+              <p>
+                Non. Il s’agit uniquement d’une hypothèse de simulation, pas
+                d’une promesse de performance future.
+              </p>
+            </details>
+
+            <details>
+              <summary>Le calcul inclut-il les frais, les impôts et l’inflation ?</summary>
+              <p>
+                Non. Ces éléments ne sont pas intégrés à l’estimation et
+                peuvent réduire fortement le résultat réel.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les montants saisis sont-ils enregistrés ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les montants ne sont pas enregistrés par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

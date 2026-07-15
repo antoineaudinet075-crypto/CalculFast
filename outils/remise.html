@@ -1,1 +1,222 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculateur de remise gratuit — CalcuFast</title><meta name="description" content="Trouve le prix après réduction et le montant économisé."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Calculateur de remise</div><div class="calculator-layout"><section class="panel"><h1>Calculateur de remise</h1><p class="lead">Trouve le prix après réduction et le montant économisé.</p><div data-calc="calcRemise"><div class="field"><label for="prix">Prix initial (€)</label><input id="prix" type="number" value="100" step="any"></div><div class="field"><label for="remise">Remise (%)</label><input id="remise" type="number" value="20" step="any"></div><div class="result"><div class="result-label">Prix remisé</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>Une remise de 20 % sur 100 € donne un prix final de 80 €.</p><div class="formula">Prix final = prix initial × (1 − remise / 100)</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calcul de remise : prix après réduction | CalcuFast</title>
+  <meta name="description" content="Calculez gratuitement le prix final après une remise en pourcentage et découvrez immédiatement le montant économisé.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/remise.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculateur de remise gratuit — CalcuFast">
+  <meta property="og:description" content="Calculez instantanément le prix final d’un produit après une réduction.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/remise.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur de remise CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/remise.html",
+        "description": "Calculateur gratuit permettant d’obtenir un prix final et le montant économisé après une remise.",
+        "applicationCategory": "ShoppingApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment calculer un prix après une remise ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multipliez le prix initial par 1 moins le pourcentage de remise divisé par 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment calculer le montant économisé ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multipliez le prix initial par le pourcentage de remise divisé par 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les prix saisis sont-ils enregistrés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est réalisé directement dans le navigateur et les valeurs ne sont pas enregistrées par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Calculateur de remise
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculateur de remise</h1>
+
+          <p class="lead">
+            Indiquez le prix initial et le pourcentage de réduction pour
+            connaître immédiatement le prix final et le montant économisé.
+          </p>
+
+          <div data-calc="calcRemise">
+            <div class="field">
+              <label for="prix">Prix initial (€)</label>
+              <input
+                id="prix"
+                type="number"
+                value="100"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="remise">Remise (%)</label>
+              <input
+                id="remise"
+                type="number"
+                value="20"
+                min="0"
+                max="100"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Résultat du calcul</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment calculer une remise ?</h2>
+
+          <p>
+            Pour obtenir le prix après réduction, transformez le pourcentage
+            de remise en nombre décimal, puis retirez cette proportion du prix
+            initial.
+          </p>
+
+          <div class="formula">
+            Prix final = prix initial × (1 − remise ÷ 100)
+          </div>
+
+          <div class="formula">
+            Économie = prix initial × remise ÷ 100
+          </div>
+
+          <h2>Exemple avec une remise de 20 %</h2>
+
+          <p>
+            Pour un article coûtant initialement 100 €, une remise de 20 %
+            représente une économie de 20 €. Le prix final est donc de 80 €.
+          </p>
+
+          <div class="formula">
+            100 € × (1 − 20 ÷ 100) = 80 €
+          </div>
+
+          <h2>Exemple avec une remise de 30 %</h2>
+
+          <p>
+            Pour un article à 59,90 €, une réduction de 30 % permet
+            d’économiser 17,97 €. Le nouveau prix est de 41,93 €.
+          </p>
+
+          <h2>Quand utiliser ce calculateur ?</h2>
+
+          <p>Cet outil peut vous aider pendant :</p>
+
+          <ul>
+            <li>les soldes et promotions en magasin ;</li>
+            <li>les achats en ligne ;</li>
+            <li>la comparaison de plusieurs réductions ;</li>
+            <li>la préparation d’une offre commerciale.</li>
+          </ul>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment calculer un prix après une remise ?</summary>
+              <p>
+                Multipliez le prix initial par 1 moins le pourcentage de
+                remise divisé par 100.
+              </p>
+            </details>
+
+            <details>
+              <summary>Comment calculer le montant économisé ?</summary>
+              <p>
+                Multipliez le prix initial par le pourcentage de remise
+                divisé par 100.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les prix saisis sont-ils enregistrés ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les valeurs ne sont pas enregistrées par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calcul du taux de marge et de marque — CalcuFast</title>
+  <meta name="description" content="Calcule gratuitement une marge commerciale, un taux de marge et un taux de marque.">
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/marge-commerciale.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Calcu<span>Fast</span></a>
+    <nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Accueil</a> → Marge commerciale</div>
+
+    <div class="calculator-layout">
+      <section class="panel">
+        <h1>Marge commerciale</h1>
+        <p class="lead">Calcule la marge réalisée entre un prix d’achat HT et un prix de vente HT.</p>
+
+        <div class="field">
+          <label for="achat">Prix d’achat HT (€)</label>
+          <input id="achat" type="number" value="60" step="any">
+        </div>
+
+        <div class="field">
+          <label for="vente">Prix de vente HT (€)</label>
+          <input id="vente" type="number" value="100" step="any">
+        </div>
+
+        <div class="result">
+          <div class="result-label">Résultats</div>
+          <div class="result-value" id="res">—</div>
+        </div>
+      </section>
+
+      <aside class="content-card">
+        <h2>Marge, taux de marge et taux de marque</h2>
+        <p>La marge commerciale correspond à la différence entre le prix de vente HT et le prix d’achat HT.</p>
+        <div class="formula">Taux de marge = marge ÷ prix d’achat HT × 100</div>
+        <div class="formula">Taux de marque = marge ÷ prix de vente HT × 100</div>
+        <p>Ces résultats sont fournis à titre indicatif.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CalcuFast</span>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</footer>
+
+<script>
+const achat = document.getElementById("achat");
+const vente = document.getElementById("vente");
+const res = document.getElementById("res");
+
+function format(nombre, unite) {
+  return nombre.toLocaleString("fr-FR", {
+    maximumFractionDigits: 2
+  }) + unite;
+}
+
+function calculer() {
+  const prixAchat = Number(achat.value);
+  const prixVente = Number(vente.value);
+
+  if (
+    !Number.isFinite(prixAchat) ||
+    !Number.isFinite(prixVente) ||
+    prixAchat <= 0 ||
+    prixVente === 0
+  ) {
+    res.textContent = "Valeurs invalides";
+    return;
+  }
+
+  const marge = prixVente - prixAchat;
+  const tauxMarge = marge / prixAchat * 100;
+  const tauxMarque = marge / prixVente * 100;
+
+  res.textContent =
+    "Marge : " + format(marge, " €") +
+    " — Taux de marge : " + format(tauxMarge, " %") +
+    " — Taux de marque : " + format(tauxMarque, " %");
+}
+
+document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculer));
+calculer();
+</script>
+</body>
+</html>

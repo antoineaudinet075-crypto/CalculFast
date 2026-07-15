@@ -1,1 +1,230 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Salaire brut en net gratuit — CalcuFast</title><meta name="description" content="Estime rapidement un salaire mensuel net à partir du brut."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Salaire brut en net</div><div class="calculator-layout"><section class="panel"><h1>Salaire brut en net</h1><p class="lead">Estime rapidement un salaire mensuel net à partir du brut.</p><div data-calc="calcSalaire"><div class="field"><label for="brut">Salaire brut mensuel (€)</label><input id="brut" type="number" value="2500" step="any"></div><div class="field"><label for="statut">Statut</label><select id="statut"><option value="noncadre">Non-cadre</option><option value="cadre">Cadre</option></select></div><div class="result"><div class="result-label">Salaire net estimé</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>Le résultat reste indicatif : cotisations, convention collective et situation personnelle peuvent le modifier.</p><div class="formula">Estimation simplifiée : environ 78 % du brut pour un non-cadre et 75 % pour un cadre</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Salaire brut en net : estimation mensuelle | CalcuFast</title>
+  <meta name="description" content="Estimez gratuitement votre salaire mensuel net à partir du brut, selon un statut cadre ou non-cadre. Calcul rapide avant impôt sur le revenu.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/salaire-net.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Salaire brut en net — CalcuFast">
+  <meta property="og:description" content="Obtenez une estimation rapide de votre salaire mensuel net à partir du brut.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/salaire-net.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Estimateur de salaire brut en net CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/salaire-net.html",
+        "description": "Outil gratuit fournissant une estimation simplifiée du salaire mensuel net à partir du salaire brut.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment est estimé le salaire net ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CalcuFast applique une estimation simplifiée égale à 78 % du salaire brut pour un non-cadre et 75 % pour un cadre."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le résultat inclut-il l’impôt sur le revenu ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le résultat correspond à une estimation du salaire net avant prélèvement à la source."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le résultat correspond-il exactement à une fiche de paie ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le montant réel dépend notamment du contrat, des cotisations, de la convention collective, des avantages et de la situation personnelle."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Salaire brut en net
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Estimation du salaire brut en net</h1>
+
+          <p class="lead">
+            Indiquez votre salaire brut mensuel et votre statut pour obtenir
+            une estimation rapide du salaire net avant impôt sur le revenu.
+          </p>
+
+          <div data-calc="calcSalaire">
+            <div class="field">
+              <label for="brut">Salaire brut mensuel (€)</label>
+              <input
+                id="brut"
+                type="number"
+                value="2500"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="statut">Statut professionnel</label>
+              <select id="statut">
+                <option value="noncadre">Non-cadre</option>
+                <option value="cadre">Cadre</option>
+              </select>
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Salaire net mensuel estimé avant impôt</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment convertir un salaire brut en net ?</h2>
+
+          <p>
+            Le salaire net correspond au salaire brut diminué des cotisations
+            salariales. Pour proposer un résultat immédiat, cet outil utilise
+            deux coefficients simplifiés.
+          </p>
+
+          <div class="formula">
+            Non-cadre : salaire net estimé = salaire brut × 78 %
+          </div>
+
+          <div class="formula">
+            Cadre : salaire net estimé = salaire brut × 75 %
+          </div>
+
+          <h2>Exemple avec 2 500 € brut</h2>
+
+          <p>
+            Avec la méthode simplifiée de CalcuFast, un salaire mensuel brut
+            de 2 500 € donne une estimation de :
+          </p>
+
+          <ul>
+            <li><strong>1 950 € net</strong> pour un non-cadre ;</li>
+            <li><strong>1 875 € net</strong> pour un cadre.</li>
+          </ul>
+
+          <h2>Une estimation avant impôt</h2>
+
+          <p>
+            Le résultat n’inclut pas le prélèvement à la source de l’impôt sur
+            le revenu. Le montant réellement versé sur votre compte peut donc
+            être inférieur selon votre taux d’imposition.
+          </p>
+
+          <h2>Pourquoi le résultat réel peut-il varier ?</h2>
+
+          <p>Une fiche de paie complète peut notamment dépendre :</p>
+
+          <ul>
+            <li>du type de contrat et du statut professionnel ;</li>
+            <li>de la convention collective ;</li>
+            <li>de la mutuelle et des avantages en nature ;</li>
+            <li>des heures supplémentaires et des primes ;</li>
+            <li>de la situation personnelle du salarié ;</li>
+            <li>du taux de prélèvement à la source.</li>
+          </ul>
+
+          <p>
+            Pour une simulation réglementaire plus détaillée, utilisez le
+            <a href="https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net"
+               target="_blank"
+               rel="noopener noreferrer">
+              simulateur officiel de l’Urssaf
+            </a>.
+          </p>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment est estimé le salaire net ?</summary>
+              <p>
+                CalcuFast applique une estimation simplifiée de 78 % du brut
+                pour un non-cadre et de 75 % pour un cadre.
+              </p>
+            </details>
+
+            <details>
+              <summary>Le résultat inclut-il l’impôt sur le revenu ?</summary>
+              <p>
+                Non. Il correspond à une estimation du salaire net avant
+                prélèvement à la source.
+              </p>
+            </details>
+
+            <details>
+              <summary>Le résultat correspond-il exactement à une fiche de paie ?</summary>
+              <p>
+                Non. Le montant réel dépend du contrat, des cotisations, de la
+                convention collective, des avantages et de votre situation.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

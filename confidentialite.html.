@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Politique de confidentialité | CalcuFast</title>
+  <meta name="description" content="Découvrez comment CalcuFast protège les informations saisies et respecte la confidentialité de ses utilisateurs.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/confidentialite.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html#outils">Tous les outils</a>
+        <a href="index.html">Accueil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <article class="content-card">
+        <h1>Politique de confidentialité</h1>
+
+        <p><strong>Dernière mise à jour : 15 juillet 2026</strong></p>
+
+        <p>
+          CalcuFast accorde une grande importance à la confidentialité de ses
+          utilisateurs. Cette page explique quelles informations peuvent être
+          traitées lors de l’utilisation du site.
+        </p>
+
+        <h2>1. Informations saisies dans les calculateurs</h2>
+
+        <p>
+          Les valeurs saisies dans les calculateurs sont traitées directement
+          dans votre navigateur. Elles ne sont pas envoyées à une base de
+          données CalcuFast et ne sont pas enregistrées par le site.
+        </p>
+
+        <p>
+          Cela concerne notamment les montants financiers, les dates, les
+          notes, le poids, la taille et les autres valeurs utilisées pour
+          effectuer un calcul.
+        </p>
+
+        <h2>2. Données techniques d’hébergement</h2>
+
+        <p>
+          CalcuFast est hébergé par Vercel. Comme pour la plupart des services
+          d’hébergement, des données techniques peuvent être traitées afin
+          d’afficher, sécuriser et maintenir le site.
+        </p>
+
+        <p>
+          Ces informations peuvent notamment comprendre l’adresse IP, le type
+          de navigateur, la date de connexion et les pages demandées. Leur
+          traitement et leur conservation dépendent des services et des règles
+          de l’hébergeur.
+        </p>
+
+        <p>
+          Consultez la
+          <a href="https://vercel.com/legal/privacy-notice"
+             target="_blank"
+             rel="noopener noreferrer">
+            politique de confidentialité de Vercel
+          </a>.
+        </p>
+
+        <h2>3. Contact par courrier électronique</h2>
+
+        <p>
+          Si vous contactez CalcuFast par e-mail, votre adresse électronique
+          et le contenu de votre message sont utilisés uniquement pour lire
+          votre demande et vous répondre.
+        </p>
+
+        <p>
+          Ces informations sont conservées pendant la durée nécessaire au
+          traitement de la demande, puis supprimées, sauf obligation légale
+          imposant une conservation plus longue.
+        </p>
+
+        <p>
+          Adresse de contact :
+          <a href="mailto:calculfast932@gmail.com">calculfast932@gmail.com</a>
+        </p>
+
+        <h2>4. Cookies et traceurs</h2>
+
+        <p>
+          À la date de la dernière mise à jour, CalcuFast n’intègre aucun outil
+          publicitaire, aucun compte utilisateur et aucun outil de mesure
+          d’audience ajouté par le site.
+        </p>
+
+        <p>
+          CalcuFast ne dépose donc pas volontairement de cookie publicitaire ou
+          de traceur de mesure d’audience nécessitant votre consentement.
+        </p>
+
+        <p>
+          Si des services publicitaires ou statistiques sont ajoutés
+          ultérieurement, cette politique sera mise à jour et un mécanisme de
+          consentement sera installé lorsque la réglementation l’exige.
+        </p>
+
+        <h2>5. Liens vers des sites extérieurs</h2>
+
+        <p>
+          Certaines pages contiennent des liens vers des sources officielles
+          ou des services extérieurs. Lorsque vous quittez CalcuFast, la
+          politique de confidentialité du site visité s’applique.
+        </p>
+
+        <h2>6. Vos droits</h2>
+
+        <p>
+          Lorsque des données personnelles sont traitées à la suite d’un
+          contact par e-mail, vous pouvez demander leur accès, leur
+          rectification ou leur suppression, ainsi que vous opposer à leur
+          traitement dans les conditions prévues par la réglementation.
+        </p>
+
+        <p>
+          Pour exercer vos droits, écrivez à
+          <a href="mailto:calculfast932@gmail.com">calculfast932@gmail.com</a>.
+        </p>
+
+        <p>
+          Vous pouvez également consulter le
+          <a href="https://www.cnil.fr/"
+             target="_blank"
+             rel="noopener noreferrer">
+            site de la CNIL
+          </a>
+          ou lui adresser une réclamation.
+        </p>
+
+        <h2>7. Modification de cette politique</h2>
+
+        <p>
+          Cette politique peut être mise à jour si le fonctionnement du site,
+          ses prestataires ou la réglementation évoluent. La date affichée en
+          haut de la page indique sa dernière modification.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+</body>
+</html>

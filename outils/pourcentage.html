@@ -1,1 +1,219 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculateur de pourcentage gratuit — CalcuFast</title><meta name="description" content="Calcule quel pourcentage représente une valeur par rapport à une autre."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Calculateur de pourcentage</div><div class="calculator-layout"><section class="panel"><h1>Calculateur de pourcentage</h1><p class="lead">Calcule quel pourcentage représente une valeur par rapport à une autre.</p><div data-calc="calcPourcentage"><div class="field"><label for="a">Valeur partielle</label><input id="a" type="number" value="25" step="any"></div><div class="field"><label for="b">Valeur totale</label><input id="b" type="number" value="100" step="any"></div><div class="result"><div class="result-label">Résultat</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>Cet outil est utile pour les notes, les budgets, les évolutions et les statistiques.</p><div class="formula">Pourcentage = valeur partielle ÷ valeur totale × 100</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calculer un pourcentage entre deux valeurs | CalcuFast</title>
+  <meta name="description" content="Calculez gratuitement quel pourcentage représente une valeur par rapport à une autre. Résultat immédiat avec formule et exemples simples.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/pourcentage.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculateur de pourcentage gratuit — CalcuFast">
+  <meta property="og:description" content="Trouvez instantanément le pourcentage représenté par une valeur par rapport à un total.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/pourcentage.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur de pourcentage CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/pourcentage.html",
+        "description": "Calculateur gratuit permettant de déterminer quel pourcentage représente une valeur par rapport à une autre.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment calculer un pourcentage entre deux valeurs ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divisez la valeur partielle par la valeur totale, puis multipliez le résultat par 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on utiliser zéro comme valeur totale ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Une division par zéro est impossible : la valeur totale doit donc être différente de zéro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les valeurs saisies sont-elles enregistrées ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est réalisé directement dans le navigateur et les valeurs ne sont pas enregistrées par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Calculateur de pourcentage
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculateur de pourcentage</h1>
+
+          <p class="lead">
+            Indiquez une valeur partielle et une valeur totale pour savoir
+            immédiatement quel pourcentage représente la première.
+          </p>
+
+          <div data-calc="calcPourcentage">
+            <div class="field">
+              <label for="a">Valeur partielle</label>
+              <input
+                id="a"
+                type="number"
+                value="25"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="b">Valeur totale</label>
+              <input
+                id="b"
+                type="number"
+                value="100"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Résultat du calcul</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment calculer un pourcentage ?</h2>
+
+          <p>
+            Pour connaître la part représentée par une valeur dans un total,
+            divisez la valeur partielle par la valeur totale, puis multipliez
+            le résultat par 100.
+          </p>
+
+          <div class="formula">
+            Pourcentage = valeur partielle ÷ valeur totale × 100
+          </div>
+
+          <h2>Exemple simple</h2>
+
+          <p>
+            Si une valeur partielle est égale à 25 et que la valeur totale est
+            égale à 100, le résultat est de 25 %.
+          </p>
+
+          <div class="formula">
+            25 ÷ 100 × 100 = 25 %
+          </div>
+
+          <h2>Autre exemple</h2>
+
+          <p>
+            Une note de 45 points sur un total de 60 représente 75 % du
+            nombre maximal de points.
+          </p>
+
+          <div class="formula">
+            45 ÷ 60 × 100 = 75 %
+          </div>
+
+          <h2>Dans quels cas utiliser cet outil ?</h2>
+
+          <p>Ce calculateur peut notamment servir à :</p>
+
+          <ul>
+            <li>convertir un résultat ou une note en pourcentage ;</li>
+            <li>calculer la part d’une dépense dans un budget ;</li>
+            <li>mesurer la proportion d’une catégorie dans un ensemble ;</li>
+            <li>présenter simplement une statistique.</li>
+          </ul>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment calculer un pourcentage entre deux valeurs ?</summary>
+              <p>
+                Divisez la valeur partielle par la valeur totale, puis
+                multipliez le résultat obtenu par 100.
+              </p>
+            </details>
+
+            <details>
+              <summary>Peut-on utiliser zéro comme valeur totale ?</summary>
+              <p>
+                Non. Une division par zéro est impossible : la valeur totale
+                doit être différente de zéro.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les valeurs saisies sont-elles enregistrées ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les valeurs ne sont pas enregistrées par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

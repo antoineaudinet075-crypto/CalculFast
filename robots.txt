@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calcul-fast-4g2l.vercel.app/sitemap.xml

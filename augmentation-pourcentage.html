@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calcul d’augmentation en pourcentage — CalcuFast</title>
+  <meta name="description" content="Calcule gratuitement le pourcentage d’augmentation ou de diminution entre deux valeurs.">
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/augmentation-pourcentage.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Calcu<span>Fast</span></a>
+    <nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Accueil</a> → Augmentation en pourcentage</div>
+
+    <div class="calculator-layout">
+      <section class="panel">
+        <h1>Augmentation ou diminution en pourcentage</h1>
+        <p class="lead">Mesure l’évolution entre une valeur initiale et une valeur finale.</p>
+
+        <div class="field">
+          <label for="initiale">Valeur initiale</label>
+          <input id="initiale" type="number" value="100" step="any">
+        </div>
+
+        <div class="field">
+          <label for="finale">Valeur finale</label>
+          <input id="finale" type="number" value="120" step="any">
+        </div>
+
+        <div class="result">
+          <div class="result-label">Évolution</div>
+          <div class="result-value" id="res">—</div>
+        </div>
+      </section>
+
+      <aside class="content-card">
+        <h2>Comment calculer une évolution ?</h2>
+        <p>Soustrais la valeur initiale à la valeur finale, puis divise le résultat par la valeur initiale.</p>
+        <div class="formula">Évolution (%) = (valeur finale − valeur initiale) ÷ valeur initiale × 100</div>
+        <h2>Exemple</h2>
+        <p>Un prix passant de 100 € à 120 € augmente de 20 %. S’il passe de 100 € à 80 €, il diminue de 20 %.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CalcuFast</span>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</footer>
+
+<script>
+const initiale = document.getElementById("initiale");
+const finale = document.getElementById("finale");
+const res = document.getElementById("res");
+
+function calculer() {
+  const a = Number(initiale.value);
+  const b = Number(finale.value);
+
+  if (!Number.isFinite(a) || !Number.isFinite(b) || a === 0) {
+    res.textContent = "Valeur initiale invalide";
+    return;
+  }
+
+  const taux = ((b - a) / Math.abs(a)) * 100;
+  const sens = taux >= 0 ? "Augmentation" : "Diminution";
+  res.textContent = sens + " de " + Math.abs(taux).toLocaleString("fr-FR", {
+    maximumFractionDigits: 2
+  }) + " %";
+}
+
+document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculer));
+calculer();
+</script>
+</body>
+</html>

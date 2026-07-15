@@ -1,1 +1,208 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jours entre deux dates gratuit — CalcuFast</title><meta name="description" content="Compte le nombre de jours séparant deux dates."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Jours entre deux dates</div><div class="calculator-layout"><section class="panel"><h1>Jours entre deux dates</h1><p class="lead">Compte le nombre de jours séparant deux dates.</p><div data-calc="calcDates"><div class="field"><label for="date1">Première date</label><input id="date1" type="date" value=""></div><div class="field"><label for="date2">Deuxième date</label><input id="date2" type="date" value=""></div><div class="result"><div class="result-label">Écart</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>Le calcul utilise des journées de 24 heures.</p><div class="formula">Écart = valeur absolue de la différence entre les deux dates</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calculer le nombre de jours entre deux dates | CalcuFast</title>
+  <meta name="description" content="Calculez gratuitement le nombre exact de jours séparant deux dates. Outil rapide pour une durée, un délai, un séjour ou un événement.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/jours-entre-dates.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nombre de jours entre deux dates — CalcuFast">
+  <meta property="og:description" content="Sélectionnez deux dates et obtenez immédiatement le nombre de jours qui les sépare.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/jours-entre-dates.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur de jours entre deux dates CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/jours-entre-dates.html",
+        "description": "Calculateur gratuit permettant de connaître le nombre de jours séparant deux dates.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment calculer le nombre de jours entre deux dates ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Soustrayez la première date à la deuxième, prenez la valeur absolue du résultat, puis convertissez la durée obtenue en jours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le premier et le dernier jour sont-ils tous les deux comptés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le résultat correspond à l’écart entre les deux dates. Pour compter également les deux dates comme des journées incluses, ajoutez un jour au résultat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les dates saisies sont-elles enregistrées ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est réalisé directement dans le navigateur et les dates ne sont pas enregistrées par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Jours entre deux dates
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculer les jours entre deux dates</h1>
+
+          <p class="lead">
+            Sélectionnez une date de début et une date de fin pour obtenir
+            immédiatement le nombre de jours qui les sépare.
+          </p>
+
+          <div data-calc="calcDates">
+            <div class="field">
+              <label for="date1">Première date</label>
+              <input id="date1" type="date" value="">
+            </div>
+
+            <div class="field">
+              <label for="date2">Deuxième date</label>
+              <input id="date2" type="date" value="">
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Écart entre les deux dates</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment calculer la durée entre deux dates ?</h2>
+
+          <p>
+            Le calculateur mesure la différence entre les deux dates, puis
+            convertit cette durée en journées de 24 heures. L’ordre des dates
+            n’a pas d’importance.
+          </p>
+
+          <div class="formula">
+            Écart = valeur absolue de la deuxième date − la première date
+          </div>
+
+          <h2>Exemple de calcul</h2>
+
+          <p>
+            Entre le 1er juillet et le 10 juillet, il existe un écart de
+            9 jours. Le calcul mesure la durée écoulée entre les deux dates.
+          </p>
+
+          <h2>Faut-il compter les deux journées ?</h2>
+
+          <p>
+            Le résultat correspond à l’écart standard entre les dates. Si vous
+            souhaitez compter à la fois la première et la dernière journée
+            comme des journées complètes incluses, ajoutez un jour au résultat.
+          </p>
+
+          <h2>Dans quels cas utiliser cet outil ?</h2>
+
+          <p>Ce calculateur peut notamment servir à connaître :</p>
+
+          <ul>
+            <li>la durée d’un voyage ou d’un séjour ;</li>
+            <li>le délai restant avant un événement ;</li>
+            <li>le nombre de jours entre deux rendez-vous ;</li>
+            <li>la durée écoulée depuis une date précise ;</li>
+            <li>la longueur d’une période administrative ou scolaire.</li>
+          </ul>
+
+          <h2>Années bissextiles</h2>
+
+          <p>
+            Le calcul s’appuie sur les dates réellement sélectionnées. Il tient
+            donc automatiquement compte des années comportant un 29 février.
+          </p>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment calculer le nombre de jours entre deux dates ?</summary>
+              <p>
+                Soustrayez la première date à la deuxième, prenez la valeur
+                absolue du résultat, puis convertissez la durée en jours.
+              </p>
+            </details>
+
+            <details>
+              <summary>Le premier et le dernier jour sont-ils comptés ?</summary>
+              <p>
+                Le résultat correspond à l’écart entre les dates. Pour compter
+                les deux journées comme incluses, ajoutez un jour.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les dates saisies sont-elles enregistrées ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les dates ne sont pas enregistrées par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

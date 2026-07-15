@@ -1,1 +1,267 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculateur de mensualité de prêt gratuit — CalcuFast</title><meta name="description" content="Estime la mensualité d’un crédit à taux fixe."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Calculateur de mensualité de prêt</div><div class="calculator-layout"><section class="panel"><h1>Calculateur de mensualité de prêt</h1><p class="lead">Estime la mensualité d’un crédit à taux fixe.</p><div data-calc="calcPret"><div class="field"><label for="montant">Montant emprunté (€)</label><input id="montant" type="number" value="200000" step="any"></div><div class="field"><label for="taux">Taux annuel (%)</label><input id="taux" type="number" value="3.5" step="any"></div><div class="field"><label for="duree">Durée (années)</label><input id="duree" type="number" value="20" step="any"></div><div class="result"><div class="result-label">Mensualité estimée</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>L’assurance, les frais de dossier et les garanties ne sont pas inclus.</p><div class="formula">Mensualité = C × m × (1+m)^n ÷ ((1+m)^n − 1)</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calcul mensualité de prêt à taux fixe | CalcuFast</title>
+  <meta name="description" content="Estimez gratuitement la mensualité d’un prêt à taux fixe selon le montant emprunté, le taux annuel et la durée du crédit.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/pret.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculateur de mensualité de prêt — CalcuFast">
+  <meta property="og:description" content="Calculez rapidement la mensualité théorique d’un crédit amortissable à taux fixe.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/pret.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur de mensualité de prêt CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/pret.html",
+        "description": "Calculateur gratuit de la mensualité théorique d’un prêt amortissable à taux fixe.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment est calculée la mensualité d’un prêt ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La mensualité dépend du capital emprunté, du taux mensuel et du nombre total de mensualités."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L’assurance emprunteur est-elle incluse ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul n’inclut pas l’assurance emprunteur, les frais de dossier, de courtage ou de garantie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre le taux saisi et le TAEG ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le taux saisi sert à calculer les intérêts. Le TAEG représente plus largement le coût total du crédit en intégrant les frais obligatoires liés à son obtention."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les informations saisies sont-elles enregistrées ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est réalisé directement dans le navigateur et les informations ne sont pas enregistrées par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Mensualité de prêt
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculateur de mensualité de prêt</h1>
+
+          <p class="lead">
+            Indiquez le montant emprunté, le taux annuel et la durée pour
+            estimer la mensualité d’un crédit amortissable à taux fixe.
+          </p>
+
+          <div data-calc="calcPret">
+            <div class="field">
+              <label for="montant">Montant emprunté (€)</label>
+              <input
+                id="montant"
+                type="number"
+                value="200000"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="taux">Taux annuel hors assurance (%)</label>
+              <input
+                id="taux"
+                type="number"
+                value="3.5"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="duree">Durée du prêt (années)</label>
+              <input
+                id="duree"
+                type="number"
+                value="20"
+                min="1"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Mensualité estimée hors assurance et frais</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment calculer la mensualité d’un prêt ?</h2>
+
+          <p>
+            Pour un prêt amortissable à taux fixe, la mensualité dépend du
+            capital emprunté, du taux d’intérêt mensuel et du nombre total de
+            mensualités.
+          </p>
+
+          <div class="formula">
+            Mensualité = C × m × (1 + m)ⁿ ÷ ((1 + m)ⁿ − 1)
+          </div>
+
+          <ul>
+            <li><strong>C</strong> correspond au capital emprunté ;</li>
+            <li><strong>m</strong> correspond au taux d’intérêt mensuel ;</li>
+            <li><strong>n</strong> correspond au nombre total de mensualités.</li>
+          </ul>
+
+          <h2>Exemple de simulation</h2>
+
+          <p>
+            Pour 200 000 € empruntés sur 20 ans à un taux annuel fixe de
+            3,5 %, la mensualité théorique est d’environ 1 160 €, hors
+            assurance et autres frais.
+          </p>
+
+          <h2>Éléments non inclus dans le résultat</h2>
+
+          <p>Cette estimation ne prend pas en compte :</p>
+
+          <ul>
+            <li>l’assurance emprunteur ;</li>
+            <li>les frais de dossier ;</li>
+            <li>les frais de courtage ;</li>
+            <li>les frais de garantie ou d’hypothèque ;</li>
+            <li>d’éventuels frais de tenue de compte ;</li>
+            <li>les variations d’un prêt à taux révisable.</li>
+          </ul>
+
+          <h2>Taux d’intérêt et TAEG</h2>
+
+          <p>
+            Le taux d’intérêt sert à calculer les intérêts du prêt. Le taux
+            annuel effectif global, ou TAEG, représente plus largement le coût
+            total du crédit et permet de comparer les offres intégrant les
+            frais obligatoires.
+          </p>
+
+          <p>
+            Avant de souscrire un crédit, comparez donc le TAEG et le coût
+            total indiqué dans les offres, pas seulement la mensualité.
+          </p>
+
+          <p>
+            Consultez les explications de
+            <a href="https://www.service-public.fr/particuliers/vosdroits/F2456"
+               target="_blank"
+               rel="noopener noreferrer">
+              Service-Public.fr sur le TAEG
+            </a>.
+          </p>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment est calculée la mensualité d’un prêt ?</summary>
+              <p>
+                Elle est calculée à partir du capital emprunté, du taux mensuel
+                et du nombre total de mensualités.
+              </p>
+            </details>
+
+            <details>
+              <summary>L’assurance emprunteur est-elle incluse ?</summary>
+              <p>
+                Non. L’assurance, les frais de dossier, de courtage et de
+                garantie ne sont pas inclus.
+              </p>
+            </details>
+
+            <details>
+              <summary>Quelle est la différence entre le taux et le TAEG ?</summary>
+              <p>
+                Le taux sert au calcul des intérêts. Le TAEG représente le
+                coût total du crédit avec les frais obligatoires liés à son
+                obtention.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les informations saisies sont-elles enregistrées ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les informations ne sont pas enregistrées par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

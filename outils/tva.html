@@ -1,1 +1,220 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculateur de TVA gratuit — CalcuFast</title><meta name="description" content="Calcule un prix TTC et le montant de TVA à partir d’un prix hors taxes."><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav></div></header><main class="page"><div class="container"><div class="breadcrumbs"><a href="../index.html">Accueil</a> → Calculateur de TVA</div><div class="calculator-layout"><section class="panel"><h1>Calculateur de TVA</h1><p class="lead">Calcule un prix TTC et le montant de TVA à partir d’un prix hors taxes.</p><div data-calc="calcTVA"><div class="field"><label for="ht">Prix HT (€)</label><input id="ht" type="number" value="100" step="any"></div><div class="field"><label for="taux">Taux de TVA (%)</label><input id="taux" type="number" value="20" step="any"></div><div class="result"><div class="result-label">Prix TTC</div><div class="result-value" id="res">—</div></div></div></section><aside class="content-card"><h2>Comment ça marche ?</h2><p>La TVA française comporte plusieurs taux selon le bien ou service. Vérifie toujours le taux applicable.</p><div class="formula">Montant TTC = Prix HT × (1 + taux de TVA / 100)</div><div class="faq"><h2>Questions fréquentes</h2><details><summary>Le calcul est-il gratuit ?</summary><p>Oui, l’outil est entièrement gratuit et ne demande aucune inscription.</p></details><details><summary>Mes données sont-elles enregistrées ?</summary><p>Non. Les calculs sont effectués directement dans ton navigateur.</p></details></div></aside></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><a href="../index.html">Retour à l’accueil</a></div></footer><script src="../script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calcul TVA : prix HT, TTC et montant | CalcuFast</title>
+  <meta name="description" content="Calculez gratuitement un prix TTC et le montant de la TVA à partir d’un prix HT. Calcul rapide avec les taux de TVA français.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/tva.html">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculateur de TVA gratuit — CalcuFast">
+  <meta property="og:description" content="Calculez instantanément un prix TTC et le montant de la TVA à partir d’un prix hors taxes.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/outils/tva.html">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Calculateur de TVA CalcuFast",
+        "url": "https://calcul-fast-4g2l.vercel.app/outils/tva.html",
+        "description": "Calculateur gratuit permettant d’obtenir un prix TTC et le montant de TVA à partir d’un prix HT.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Tous",
+        "inLanguage": "fr-FR",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Comment calculer un prix TTC à partir d’un prix HT ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multipliez le prix HT par 1 plus le taux de TVA divisé par 100. Pour un taux de 20 %, un prix de 100 euros HT donne 120 euros TTC."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quels sont les taux de TVA en France métropolitaine ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les principaux taux en France métropolitaine sont 20 %, 10 %, 5,5 % et 2,1 %. Le taux applicable dépend du produit ou du service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les données saisies sont-elles enregistrées ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Le calcul est effectué directement dans le navigateur et les données saisies ne sont pas enregistrées par CalcuFast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="../index.html#outils">Tous les outils</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Accueil</a> → Calculateur de TVA
+      </div>
+
+      <div class="calculator-layout">
+        <section class="panel">
+          <h1>Calculateur de TVA : HT vers TTC</h1>
+
+          <p class="lead">
+            Entrez un prix hors taxes et un taux de TVA pour obtenir
+            immédiatement le prix TTC et le montant de la taxe.
+          </p>
+
+          <div data-calc="calcTVA">
+            <div class="field">
+              <label for="ht">Prix hors taxes (€)</label>
+              <input
+                id="ht"
+                type="number"
+                value="100"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="field">
+              <label for="taux">Taux de TVA (%)</label>
+              <input
+                id="taux"
+                type="number"
+                value="20"
+                min="0"
+                step="any"
+                inputmode="decimal"
+              >
+            </div>
+
+            <div class="result" aria-live="polite">
+              <div class="result-label">Résultat du calcul</div>
+              <div class="result-value" id="res">—</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="content-card">
+          <h2>Comment calculer la TVA ?</h2>
+
+          <p>
+            Pour passer d’un prix HT à un prix TTC, ajoutez au prix hors
+            taxes le montant correspondant au taux de TVA.
+          </p>
+
+          <div class="formula">
+            Prix TTC = Prix HT × (1 + taux de TVA ÷ 100)
+          </div>
+
+          <div class="formula">
+            Montant de TVA = Prix HT × taux de TVA ÷ 100
+          </div>
+
+          <h2>Exemple de calcul à 20 %</h2>
+
+          <p>
+            Pour un prix de 100 € HT avec un taux de 20 %, la TVA est de
+            20 € et le prix final est de 120 € TTC.
+          </p>
+
+          <h2>Taux de TVA en France métropolitaine</h2>
+
+          <p>Les taux actuellement applicables sont principalement :</p>
+
+          <ul>
+            <li><strong>20 %</strong> : taux normal appliqué à la majorité des biens et services ;</li>
+            <li><strong>10 %</strong> : taux réduit applicable à certaines activités ;</li>
+            <li><strong>5,5 %</strong> : taux réduit pour certains produits et services ;</li>
+            <li><strong>2,1 %</strong> : taux particulier réservé à certains produits.</li>
+          </ul>
+
+          <p>
+            Le taux dépend de la nature du bien ou du service et parfois du
+            territoire. Vérifiez le taux correspondant à votre situation sur
+            le
+            <a href="https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mes-autres-impots-et-taxes/tva-quels-sont-les-taux-de-votre-quotidien"
+               target="_blank"
+               rel="noopener noreferrer">
+              site officiel du ministère de l’Économie
+            </a>.
+          </p>
+
+          <div class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <details>
+              <summary>Comment calculer un prix TTC à partir d’un prix HT ?</summary>
+              <p>
+                Multipliez le prix HT par 1 plus le taux de TVA divisé par
+                100. À 20 %, 100 € HT correspondent à 120 € TTC.
+              </p>
+            </details>
+
+            <details>
+              <summary>Quels sont les taux de TVA en France métropolitaine ?</summary>
+              <p>
+                Les principaux taux sont 20 %, 10 %, 5,5 % et 2,1 %. Le taux
+                applicable dépend du produit ou du service.
+              </p>
+            </details>
+
+            <details>
+              <summary>Les données saisies sont-elles enregistrées ?</summary>
+              <p>
+                Non. Le calcul est effectué directement dans votre navigateur
+                et les données ne sont pas enregistrées par CalcuFast.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <a href="../index.html">Retour à l’accueil</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

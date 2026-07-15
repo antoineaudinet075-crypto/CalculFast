@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calcul de TVA inversée : TTC vers HT — CalcuFast</title>
+  <meta name="description" content="Retrouve gratuitement le prix HT et le montant de TVA à partir d’un prix TTC.">
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/tva-inversee.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Calcu<span>Fast</span></a>
+    <nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Accueil</a> → TVA inversée</div>
+
+    <div class="calculator-layout">
+      <section class="panel">
+        <h1>Calculateur de TVA inversée</h1>
+        <p class="lead">Retrouve le prix hors taxes à partir d’un prix toutes taxes comprises.</p>
+
+        <div class="field">
+          <label for="ttc">Prix TTC (€)</label>
+          <input id="ttc" type="number" value="120" step="any">
+        </div>
+
+        <div class="field">
+          <label for="taux">Taux de TVA (%)</label>
+          <input id="taux" type="number" value="20" step="any">
+        </div>
+
+        <div class="result">
+          <div class="result-label">Résultat</div>
+          <div class="result-value" id="res">—</div>
+        </div>
+      </section>
+
+      <aside class="content-card">
+        <h2>Comment enlever la TVA ?</h2>
+        <p>Pour retrouver le prix HT, il ne faut pas simplement retirer le pourcentage du prix TTC.</p>
+        <div class="formula">Prix HT = Prix TTC ÷ (1 + taux de TVA / 100)</div>
+        <h2>Exemple à 20 %</h2>
+        <p>Pour 120 € TTC, le prix HT est de 100 € et la TVA comprise dans le prix est de 20 €.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CalcuFast</span>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</footer>
+
+<script>
+const ttc = document.getElementById("ttc");
+const taux = document.getElementById("taux");
+const res = document.getElementById("res");
+
+function euros(nombre) {
+  return nombre.toLocaleString("fr-FR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }) + " €";
+}
+
+function calculer() {
+  const prixTTC = Number(ttc.value);
+  const tauxTVA = Number(taux.value);
+
+  if (!Number.isFinite(prixTTC) || !Number.isFinite(tauxTVA) || tauxTVA <= -100) {
+    res.textContent = "Valeurs invalides";
+    return;
+  }
+
+  const prixHT = prixTTC / (1 + tauxTVA / 100);
+  const montantTVA = prixTTC - prixHT;
+
+  res.textContent = euros(prixHT) + " HT — TVA : " + euros(montantTVA);
+}
+
+document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculer));
+calculer();
+</script>
+</body>
+</html>

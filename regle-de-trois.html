@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculateur de règle de trois — CalcuFast</title>
+  <meta name="description" content="Effectue gratuitement une règle de trois ou un produit en croix.">
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/regle-de-trois.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Calcu<span>Fast</span></a>
+    <nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Accueil</a> → Règle de trois</div>
+
+    <div class="calculator-layout">
+      <section class="panel">
+        <h1>Règle de trois</h1>
+        <p class="lead">Trouve la quatrième valeur d’une situation proportionnelle.</p>
+
+        <div class="field">
+          <label for="a">Première valeur A</label>
+          <input id="a" type="number" value="4" step="any">
+        </div>
+
+        <div class="field">
+          <label for="b">Valeur correspondante B</label>
+          <input id="b" type="number" value="10" step="any">
+        </div>
+
+        <div class="field">
+          <label for="c">Nouvelle valeur C</label>
+          <input id="c" type="number" value="6" step="any">
+        </div>
+
+        <div class="result">
+          <div class="result-label">Valeur recherchée</div>
+          <div class="result-value" id="res">—</div>
+        </div>
+      </section>
+
+      <aside class="content-card">
+        <h2>Comment fonctionne le produit en croix ?</h2>
+        <p>Si A correspond à B et que C correspond à X, la valeur X est obtenue avec un produit en croix.</p>
+        <div class="formula">X = B × C ÷ A</div>
+        <h2>Exemple</h2>
+        <p>Si 4 articles coûtent 10 €, alors 6 articles coûtent 15 €.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CalcuFast</span>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</footer>
+
+<script>
+const a = document.getElementById("a");
+const b = document.getElementById("b");
+const c = document.getElementById("c");
+const res = document.getElementById("res");
+
+function calculer() {
+  const valeurA = Number(a.value);
+  const valeurB = Number(b.value);
+  const valeurC = Number(c.value);
+
+  if (
+    !Number.isFinite(valeurA) ||
+    !Number.isFinite(valeurB) ||
+    !Number.isFinite(valeurC) ||
+    valeurA === 0
+  ) {
+    res.textContent = "Valeurs invalides";
+    return;
+  }
+
+  const resultat = valeurB * valeurC / valeurA;
+
+  res.textContent = resultat.toLocaleString("fr-FR", {
+    maximumFractionDigits: 6
+  });
+}
+
+document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculer));
+calculer();
+</script>
+</body>
+</html>

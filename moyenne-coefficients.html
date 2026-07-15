@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculateur de moyenne avec coefficients — CalcuFast</title>
+  <meta name="description" content="Calcule gratuitement une moyenne pondérée avec des notes et des coefficients.">
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/moyenne-coefficients.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Calcu<span>Fast</span></a>
+    <nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Accueil</a> → Moyenne avec coefficients</div>
+
+    <div class="calculator-layout">
+      <section class="panel">
+        <h1>Moyenne avec coefficients</h1>
+        <p class="lead">Entre les notes et leurs coefficients dans le même ordre, séparés par des espaces.</p>
+
+        <div class="field">
+          <label for="notes">Notes</label>
+          <input id="notes" type="text" value="12 15 10 18">
+        </div>
+
+        <div class="field">
+          <label for="coefficients">Coefficients</label>
+          <input id="coefficients" type="text" value="2 3 1 4">
+        </div>
+
+        <div class="result">
+          <div class="result-label">Moyenne pondérée</div>
+          <div class="result-value" id="res">—</div>
+        </div>
+      </section>
+
+      <aside class="content-card">
+        <h2>Comment calculer une moyenne pondérée ?</h2>
+        <p>Chaque note est multipliée par son coefficient. Les résultats sont additionnés, puis divisés par la somme des coefficients.</p>
+        <div class="formula">Moyenne = somme(note × coefficient) ÷ somme des coefficients</div>
+        <h2>Conseil</h2>
+        <p>Il doit y avoir exactement autant de coefficients que de notes.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CalcuFast</span>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</footer>
+
+<script>
+const notesInput = document.getElementById("notes");
+const coefficientsInput = document.getElementById("coefficients");
+const res = document.getElementById("res");
+
+function lireListe(texte) {
+  return texte.trim().split(/[\s;]+/).map(valeur => Number(valeur.replace(",", ".")));
+}
+
+function calculer() {
+  const notes = lireListe(notesInput.value);
+  const coefficients = lireListe(coefficientsInput.value);
+
+  if (
+    notes.length !== coefficients.length ||
+    notes.length === 0 ||
+    notes.some(n => !Number.isFinite(n)) ||
+    coefficients.some(c => !Number.isFinite(c) || c < 0)
+  ) {
+    res.textContent = "Vérifie les notes et coefficients";
+    return;
+  }
+
+  const totalCoefficients = coefficients.reduce((a, b) => a + b, 0);
+
+  if (totalCoefficients === 0) {
+    res.textContent = "Coefficients invalides";
+    return;
+  }
+
+  const total = notes.reduce((somme, note, index) => {
+    return somme + note * coefficients[index];
+  }, 0);
+
+  res.textContent = (total / totalCoefficients).toLocaleString("fr-FR", {
+    maximumFractionDigits: 2
+  }) + " / 20";
+}
+
+document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculer));
+calculer();
+</script>
+</body>
+</html><!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculateur de moyenne avec coefficients — CalcuFast</title>
+  <meta name="description" content="Calcule gratuitement une moyenne pondérée avec des notes et des coefficients.">
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/outils/moyenne-coefficients.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Calcu<span>Fast</span></a>
+    <nav class="nav-links"><a href="../index.html#outils">Tous les outils</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="breadcrumbs"><a href="../index.html">Accueil</a> → Moyenne avec coefficients</div>
+
+    <div class="calculator-layout">
+      <section class="panel">
+        <h1>Moyenne avec coefficients</h1>
+        <p class="lead">Entre les notes et leurs coefficients dans le même ordre, séparés par des espaces.</p>
+
+        <div class="field">
+          <label for="notes">Notes</label>
+          <input id="notes" type="text" value="12 15 10 18">
+        </div>
+
+        <div class="field">
+          <label for="coefficients">Coefficients</label>
+          <input id="coefficients" type="text" value="2 3 1 4">
+        </div>
+
+        <div class="result">
+          <div class="result-label">Moyenne pondérée</div>
+          <div class="result-value" id="res">—</div>
+        </div>
+      </section>
+
+      <aside class="content-card">
+        <h2>Comment calculer une moyenne pondérée ?</h2>
+        <p>Chaque note est multipliée par son coefficient. Les résultats sont additionnés, puis divisés par la somme des coefficients.</p>
+        <div class="formula">Moyenne = somme(note × coefficient) ÷ somme des coefficients</div>
+        <h2>Conseil</h2>
+        <p>Il doit y avoir exactement autant de coefficients que de notes.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CalcuFast</span>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</footer>
+
+<script>
+const notesInput = document.getElementById("notes");
+const coefficientsInput = document.getElementById("coefficients");
+const res = document.getElementById("res");
+
+function lireListe(texte) {
+  return texte.trim().split(/[\s;]+/).map(valeur => Number(valeur.replace(",", ".")));
+}
+
+function calculer() {
+  const notes = lireListe(notesInput.value);
+  const coefficients = lireListe(coefficientsInput.value);
+
+  if (
+    notes.length !== coefficients.length ||
+    notes.length === 0 ||
+    notes.some(n => !Number.isFinite(n)) ||
+    coefficients.some(c => !Number.isFinite(c) || c < 0)
+  ) {
+    res.textContent = "Vérifie les notes et coefficients";
+    return;
+  }
+
+  const totalCoefficients = coefficients.reduce((a, b) => a + b, 0);
+
+  if (totalCoefficients === 0) {
+    res.textContent = "Coefficients invalides";
+    return;
+  }
+
+  const total = notes.reduce((somme, note, index) => {
+    return somme + note * coefficients[index];
+  }, 0);
+
+  res.textContent = (total / totalCoefficients).toLocaleString("fr-FR", {
+    maximumFractionDigits: 2
+  }) + " / 20";
+}
+
+document.querySelectorAll("input").forEach(input => input.addEventListener("input", calculer));
+calculer();
+</script>
+</body>
+</html>

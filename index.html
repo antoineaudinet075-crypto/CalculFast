@@ -1,12 +1,199 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CalcuFast — Calculateurs gratuits et simples</title><meta name="description" content="Des calculateurs gratuits pour la finance, les études, la santé et la vie quotidienne."><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="index.html">Calcu<span>Fast</span></a><nav class="nav-links"><a href="#outils">Outils</a><a href="#apropos">À propos</a></nav></div></header><main><section class="hero"><div class="container"><span class="badge">100 % gratuit · sans inscription</span><h1>Les calculs utiles, sans prise de tête.</h1><p>Finance, études, santé et quotidien : des outils rapides, clairs et accessibles sur ordinateur comme sur mobile.</p><div class="search"><input id="toolSearch" oninput="filterTools()" placeholder="Rechercher un calculateur…"><button onclick="filterTools()">Rechercher</button></div></div></section><section class="section" id="outils"><div class="container"><h2>Calculateurs populaires</h2><p class="section-intro">Choisis un outil et obtiens ton résultat immédiatement.</p><div class="grid">
-<a class="tool-card" href="outils/tva.html"><div class="icon">€</div><h3>Calculateur de TVA</h3><p>Convertis un prix HT en TTC et calcule le montant de TVA.</p></a>
-<a class="tool-card" href="outils/pourcentage.html"><div class="icon">%</div><h3>Pourcentage</h3><p>Calcule rapidement la part d'une valeur par rapport à une autre.</p></a>
-<a class="tool-card" href="outils/remise.html"><div class="icon">🏷️</div><h3>Remise</h3><p>Découvre le prix final après une réduction.</p></a>
-<a class="tool-card" href="outils/age.html"><div class="icon">🎂</div><h3>Âge exact</h3><p>Calcule ton âge à partir de ta date de naissance.</p></a>
-<a class="tool-card" href="outils/jours-entre-dates.html"><div class="icon">📅</div><h3>Jours entre deux dates</h3><p>Compte précisément la durée entre deux dates.</p></a>
-<a class="tool-card" href="outils/salaire-net.html"><div class="icon">💼</div><h3>Salaire brut en net</h3><p>Estime rapidement ton salaire mensuel net.</p></a>
-<a class="tool-card" href="outils/imc.html"><div class="icon">⚖️</div><h3>IMC</h3><p>Calcule ton indice de masse corporelle.</p></a>
-<a class="tool-card" href="outils/moyenne.html"><div class="icon">🎓</div><h3>Moyenne de notes</h3><p>Entre tes notes et obtiens ta moyenne sur 20.</p></a>
-<a class="tool-card" href="outils/interets-composes.html"><div class="icon">📈</div><h3>Intérêts composés</h3><p>Projette la croissance d'une épargne dans le temps.</p></a>
-<a class="tool-card" href="outils/pret.html"><div class="icon">🏠</div><h3>Mensualité de prêt</h3><p>Estime la mensualité d'un crédit amortissable.</p></a>
-</div></div></section><section class="section" id="apropos"><div class="container content-card"><h2>Pourquoi CalcuFast ?</h2><p>CalcuFast rassemble des outils simples pour éviter les feuilles de calcul compliquées. Les résultats sont fournis à titre indicatif et ne remplacent pas un conseil professionnel.</p></div></section></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 CalcuFast</span><span>Calculs indicatifs · Données non conservées</span></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calculateurs gratuits en ligne | CalcuFast</title>
+  <meta name="description" content="Calculez gratuitement la TVA, un pourcentage, une remise, votre salaire net, votre IMC, une moyenne, un prêt et plus encore avec CalcuFast.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="canonical" href="https://calcul-fast-4g2l.vercel.app/">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CalcuFast — Calculateurs gratuits en ligne">
+  <meta property="og:description" content="Des outils rapides et gratuits pour la finance, les études, la santé et la vie quotidienne.">
+  <meta property="og:url" content="https://calcul-fast-4g2l.vercel.app/">
+  <meta property="og:site_name" content="CalcuFast">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CalcuFast — Calculateurs gratuits en ligne">
+  <meta name="twitter:description" content="TVA, pourcentage, remise, salaire net, IMC, moyenne, prêt et autres calculs utiles.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CalcuFast",
+    "url": "https://calcul-fast-4g2l.vercel.app/",
+    "description": "Des calculateurs gratuits pour la finance, les études, la santé et la vie quotidienne.",
+    "inLanguage": "fr-FR"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Accueil CalcuFast">
+        Calcu<span>Fast</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#outils">Outils</a>
+        <a href="#apropos">À propos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">100 % gratuit · sans inscription</span>
+
+        <h1>Les calculs utiles, sans prise de tête.</h1>
+
+        <p>
+          Utilisez gratuitement nos calculateurs de TVA, pourcentage, remise,
+          salaire net, IMC, moyenne, prêt et intérêts composés. Les résultats
+          sont obtenus immédiatement, sur ordinateur comme sur mobile.
+        </p>
+
+        <div class="search">
+          <input
+            id="toolSearch"
+            type="search"
+            oninput="filterTools()"
+            placeholder="Rechercher un calculateur…"
+            aria-label="Rechercher un calculateur"
+          >
+          <button type="button" onclick="filterTools()">Rechercher</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outils">
+      <div class="container">
+        <h2>Nos calculateurs gratuits</h2>
+
+        <p class="section-intro">
+          Choisissez un outil et obtenez votre résultat immédiatement.
+          Aucune inscription n’est nécessaire.
+        </p>
+
+        <div class="grid">
+          <a class="tool-card" href="outils/tva.html">
+            <div class="icon" aria-hidden="true">€</div>
+            <h3>Calculateur de TVA</h3>
+            <p>Convertissez un prix HT en TTC et calculez le montant exact de la TVA.</p>
+          </a>
+
+          <a class="tool-card" href="outils/pourcentage.html">
+            <div class="icon" aria-hidden="true">%</div>
+            <h3>Calculateur de pourcentage</h3>
+            <p>Calculez rapidement un pourcentage, une proportion ou une évolution.</p>
+          </a>
+
+          <a class="tool-card" href="outils/remise.html">
+            <div class="icon" aria-hidden="true">🏷️</div>
+            <h3>Calculateur de remise</h3>
+            <p>Découvrez le prix final d’un produit après une réduction.</p>
+          </a>
+
+          <a class="tool-card" href="outils/age.html">
+            <div class="icon" aria-hidden="true">🎂</div>
+            <h3>Calculateur d’âge exact</h3>
+            <p>Calculez votre âge précis à partir de votre date de naissance.</p>
+          </a>
+
+          <a class="tool-card" href="outils/jours-entre-dates.html">
+            <div class="icon" aria-hidden="true">📅</div>
+            <h3>Jours entre deux dates</h3>
+            <p>Comptez précisément le nombre de jours séparant deux dates.</p>
+          </a>
+
+          <a class="tool-card" href="outils/salaire-net.html">
+            <div class="icon" aria-hidden="true">💼</div>
+            <h3>Salaire brut en net</h3>
+            <p>Estimez rapidement votre salaire mensuel net à partir du brut.</p>
+          </a>
+
+          <a class="tool-card" href="outils/imc.html">
+            <div class="icon" aria-hidden="true">⚖️</div>
+            <h3>Calculateur d’IMC</h3>
+            <p>Calculez votre indice de masse corporelle selon votre taille et votre poids.</p>
+          </a>
+
+          <a class="tool-card" href="outils/moyenne.html">
+            <div class="icon" aria-hidden="true">🎓</div>
+            <h3>Moyenne de notes</h3>
+            <p>Entrez vos notes et leurs coefficients pour obtenir votre moyenne.</p>
+          </a>
+
+          <a class="tool-card" href="outils/interets-composes.html">
+            <div class="icon" aria-hidden="true">📈</div>
+            <h3>Intérêts composés</h3>
+            <p>Projetez la croissance d’une épargne ou d’un investissement dans le temps.</p>
+          </a>
+
+          <a class="tool-card" href="outils/pret.html">
+            <div class="icon" aria-hidden="true">🏠</div>
+            <h3>Mensualité de prêt</h3>
+            <p>Estimez la mensualité et le coût d’un crédit amortissable.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apropos">
+      <div class="container content-card">
+        <h2>Pourquoi utiliser CalcuFast ?</h2>
+
+        <p>
+          CalcuFast rassemble au même endroit les calculs les plus utiles du
+          quotidien. Chaque outil est conçu pour être simple, rapide et
+          accessible gratuitement, sans création de compte.
+        </p>
+
+        <p>
+          Les calculs sont effectués directement dans votre navigateur :
+          les informations saisies ne sont pas enregistrées par CalcuFast.
+          Les résultats sont indicatifs et ne remplacent pas l’avis d’un
+          professionnel.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container content-card">
+        <h2>Questions fréquentes</h2>
+
+        <h3>Les calculateurs sont-ils gratuits ?</h3>
+        <p>Oui, tous les outils CalcuFast sont gratuits et accessibles sans inscription.</p>
+
+        <h3>Mes informations sont-elles conservées ?</h3>
+        <p>Non. Les calculs sont réalisés directement dans votre navigateur et les données saisies ne sont pas enregistrées.</p>
+
+        <h3>CalcuFast fonctionne-t-il sur téléphone ?</h3>
+        <p>Oui, le site est adapté aux ordinateurs, tablettes et téléphones.</p>
+
+        <h3>Les résultats sont-ils fiables ?</h3>
+        <p>Les résultats reposent sur les formules couramment utilisées. Ils restent indicatifs, notamment pour les calculs financiers, médicaux ou salariaux.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 CalcuFast</span>
+      <span>Calculs indicatifs · Données non conservées</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

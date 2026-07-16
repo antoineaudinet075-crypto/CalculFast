@@ -12,6 +12,67 @@ function calcIMC(){const p=value('poids'),t=value('taille')/100;const imc=t?p/(t
 function calcMoyenne(){const vals=(document.getElementById('notes').value||'').split(/[;, ]+/).map(x=>parseFloat(x.replace(',','.'))).filter(Number.isFinite);setResult('res',vals.length?`${num(vals.reduce((a,b)=>a+b,0)/vals.length)} / 20`:'Entre des notes')}
 function calcInterets(){const c=value('capital'),r=value('rendement')/100,n=value('annees'),v=value('versement');let total=c;for(let i=0;i<n;i++)total=(total+v*12)*(1+r);setResult('res',`${money(total)} après ${n} ans`)}
 function calcPret(){const c=value('montant'),annual=value('taux')/100,years=value('duree'),m=annual/12,n=years*12;const pay=m?c*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1):c/n;setResult('res',`${money(pay)} / mois`)}
-function filterTools(){const q=(document.getElementById('toolSearch').value||'').toLowerCase();document.querySelectorAll('.tool-card').forEach(c=>c.classList.toggle('hidden',!c.innerText.toLowerCase().includes(q)))}
-document.addEventListener('input',e=>{const form=e.target.closest('[data-calc]');if(form&&window[form.dataset.calc])window[form.dataset.calc]()});
+let activeCategory='all';
+
+const toolCategories={
+  finance:[
+    'tva.html',
+    'remise.html',
+    'salaire-net.html',
+    'interets-composes.html',
+    'pret.html',
+    'tva-inversee.html',
+    'marge-commerciale.html'
+  ],
+  etudes:[
+    'pourcentage.html',
+    'moyenne.html',
+    'moyenne-coefficients.html',
+    'regle-de-trois.html'
+  ],
+  sante:[
+    'imc.html'
+  ],
+  quotidien:[
+    'age.html',
+    'jours-entre-dates.html',
+    'augmentation-pourcentage.html'
+  ]
+};
+
+function categoryOf(card){
+  const href=card.getAttribute('href')||'';
+
+  for(const [category,files] of Object.entries(toolCategories)){
+    if(files.some(file=>href.endsWith(file))) return category;
+  }
+
+  return 'quotidien';
+}
+
+function applyToolFilters(){
+  const input=document.getElementById('toolSearch');
+  const query=(input?.value||'').trim().toLowerCase();
+
+  document.querySelectorAll('.tool-card').forEach(card=>{
+    const matchesSearch=card.innerText.toLowerCase().includes(query);
+    const matchesCategory=activeCategory==='all'||categoryOf(card)===activeCategory;
+    card.classList.toggle('hidden',!(matchesSearch&&matchesCategory));
+  });
+}
+
+function filterTools(){
+  applyToolFilters();
+}
+
+function filterCategory(category,button){
+  activeCategory=category;
+
+  document.querySelectorAll('.category-btn').forEach(btn=>{
+    btn.classList.remove('active');
+  });
+
+  if(button) button.classList.add('active');
+  applyToolFilters();
+}
 document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-calc]').forEach(f=>{if(window[f.dataset.calc])window[f.dataset.calc]()})});

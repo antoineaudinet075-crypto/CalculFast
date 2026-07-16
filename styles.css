@@ -399,4 +399,40 @@ body{
   .hero-stat span{
     font-size:.75rem;
   }
+  /* Filtres des catégories */
+
+.category-filters{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 30px;
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+
+.category-btn{
+  flex:none;
+  padding:10px 17px;
+  border:1px solid #dfe3e8;
+  border-radius:999px;
+  color:#525866;
+  background:#fff;
+  font:inherit;
+  font-size:.92rem;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.category-btn:hover{
+  color:#111;
+  border-color:#aeb4c0;
+  transform:translateY(-1px);
+}
+
+.category-btn.active{
+  color:#fff;
+  background:#111;
+  border-color:#111;
+  box-shadow:0 6px 16px rgba(0,0,0,.14);
 }
